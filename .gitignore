@@ -1,0 +1,27 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# Database runtime files
+*.db
+*.sqlite
+*.sqlite3
+
+# Node / Frontend build
+node_modules/
+dist/
+build/
+
+# OS & Editor
+.DS_Store
+.idea/
+.vscode/
