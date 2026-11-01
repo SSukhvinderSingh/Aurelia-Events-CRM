@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="velvet-light"] {
+  --bg-canvas: #F6F3EC;
+  --bg-canvas-subtle: #EFECE4;
+  --bg-surface: #FCFBF8;
+  --bg-surface-elevated: #F4EFE6;
+  --bg-chrome: #231F1D;
+  --border-subtle: #DFD8CC;
+  --border-strong: #C8B9A6;
+  --text-primary: #1E1A17;
+  --text-secondary: #5C534B;
+  --text-muted: #84796E;
+  --accent-champagne: #B88928;
+  --accent-terracotta: #B86B52;
+  --accent-sage: #3B6E4C;
+  --spine-gradient: linear-gradient(180deg, #C89D54 0%, #B86B52 52%, #4A7C59 100%);
+}
+
+[data-theme="espresso-dark"] {
+  --bg-canvas: #161311;
+  --bg-canvas-subtle: #1C1815;
+  --bg-surface: #221E1B;
+  --bg-surface-elevated: #2B2521;
+  --bg-chrome: #120F0D;
+  --border-subtle: #3D352E;
+  --border-strong: #594D42;
+  --text-primary: #FBF9F5;
+  --text-secondary: #D7CFC4;
+  --text-muted: #A3978A;
+  --accent-champagne: #E5C158;
+  --accent-terracotta: #E08A6E;
+  --accent-sage: #52B788;
+  --spine-gradient: linear-gradient(180deg, #E5C158 0%, #E08A6E 52%, #52B788 100%);
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.022em;
+}
+
+/* Apple Bento Card Elevation Helper */
+[data-theme="velvet-light"] .apple-bento-card {
+  box-shadow: 0 4px 24px rgba(30, 26, 23, 0.05);
+}
+
+[data-theme="espresso-dark"] .apple-bento-card {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Custom Scrollbar — Warm Espresso & Sand */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-champagne);
+}
+
+/* Semantic Spine Helper */
+.aurelia-timeline-spine {
+  background: var(--spine-gradient);
+}
+
+/* ============================================================================
+   THEME ENGINE OVERRIDES: Soft Espresso & Champagne Velvet (velvet-light)
+   ============================================================================ */
+[data-theme="velvet-light"] .bg-slate-950 {
+  background-color: var(--bg-canvas) !important;
+}
+
+[data-theme="velvet-light"] .bg-slate-950\/95,
+[data-theme="velvet-light"] .bg-slate-950\/90,
+[data-theme="velvet-light"] .bg-slate-950\/80,
+[data-theme="velvet-light"] .bg-slate-950\/70,
+[data-theme="velvet-light"] .bg-slate-950\/60 {
+  background-color: var(--bg-surface) !important;
+}
+
+[data-theme="velvet-light"] .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(30, 26, 23, 0.55) !important;
+}
+
+[data-theme="velvet-light"] .bg-slate-900,
+[data-theme="velvet-light"] .bg-slate-900\/95,
+[data-theme="velvet-light"] .bg-slate-900\/90,
+[data-theme="velvet-light"] .bg-slate-900\/80,
+[data-theme="velvet-light"] .bg-slate-900\/75,
+[data-theme="velvet-light"] .bg-slate-900\/70,
+[data-theme="velvet-light"] .bg-slate-900\/60,
+[data-theme="velvet-light"] .bg-slate-900\/45 {
+  background-color: var(--bg-surface-elevated) !important;
+}
+
+[data-theme="velvet-light"] .bg-slate-800,
+[data-theme="velvet-light"] .bg-slate-800\/80,
+[data-theme="velvet-light"] .bg-slate-800\/60 {
+  background-color: #E8E0D4 !important;
+}
+
+[data-theme="velvet-light"] .border-slate-800,
+[data-theme="velvet-light"] .border-slate-800\/90,
+[data-theme="velvet-light"] .border-slate-800\/80,
+[data-theme="velvet-light"] .border-slate-800\/70 {
+  border-color: var(--border-subtle) !important;
+}
+
+[data-theme="velvet-light"] .border-slate-700 {
+  border-color: var(--border-strong) !important;
+}
+
+[data-theme="velvet-light"] .text-white,
+[data-theme="velvet-light"] .text-slate-100,
+[data-theme="velvet-light"] .text-slate-200 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="velvet-light"] .text-slate-300 {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="velvet-light"] .text-slate-400,
+[data-theme="velvet-light"] .text-slate-500 {
+  color: var(--text-muted) !important;
+}
+
+/* Editorial Accent Text Overrides for Light Mode Readability */
+[data-theme="velvet-light"] .text-amber-300,
+[data-theme="velvet-light"] .text-amber-200,
+[data-theme="velvet-light"] .text-amber-400 {
+  color: #8C6214 !important;
+}
+
+[data-theme="velvet-light"] .text-emerald-300,
+[data-theme="velvet-light"] .text-emerald-200,
+[data-theme="velvet-light"] .text-emerald-400 {
+  color: #275938 !important;
+}
+
+[data-theme="velvet-light"] .text-sky-300,
+[data-theme="velvet-light"] .text-sky-200,
+[data-theme="velvet-light"] .text-sky-400 {
+  color: #7D4E2D !important;
+}
+
+[data-theme="velvet-light"] .text-fuchsia-300,
+[data-theme="velvet-light"] .text-fuchsia-400 {
+  color: #8F4230 !important;
+}
+
+[data-theme="velvet-light"] .text-rose-300,
+[data-theme="velvet-light"] .text-rose-200 {
+  color: #9E2F26 !important;
+}
+
+/* Tinted Pill Backgrounds in Velvet Light */
+[data-theme="velvet-light"] .bg-amber-500\/15,
+[data-theme="velvet-light"] .bg-amber-500\/20,
+[data-theme="velvet-light"] .bg-amber-500\/10 {
+  background-color: rgba(200, 157, 84, 0.18) !important;
+  border-color: rgba(184, 137, 40, 0.4) !important;
+}
+
+[data-theme="velvet-light"] .bg-emerald-500\/15,
+[data-theme="velvet-light"] .bg-emerald-500\/20,
+[data-theme="velvet-light"] .bg-emerald-500\/10 {
+  background-color: rgba(74, 124, 89, 0.15) !important;
+  border-color: rgba(59, 110, 76, 0.35) !important;
+}
+
+[data-theme="velvet-light"] .bg-sky-500\/15,
+[data-theme="velvet-light"] .bg-sky-500\/20,
+[data-theme="velvet-light"] .bg-sky-500\/10 {
+  background-color: rgba(184, 107, 82, 0.14) !important;
+  border-color: rgba(160, 92, 69, 0.35) !important;
+}
+
+[data-theme="velvet-light"] .bg-fuchsia-500\/15,
+[data-theme="velvet-light"] .bg-fuchsia-500\/10,
+[data-theme="velvet-light"] .bg-fuchsia-950\/15 {
+  background-color: rgba(184, 107, 82, 0.15) !important;
+  border-color: rgba(184, 107, 82, 0.38) !important;
+}
+
+[data-theme="velvet-light"] .shadow-black\/70,
+[data-theme="velvet-light"] .shadow-black\/90,
+[data-theme="velvet-light"] .shadow-black {
+  --tw-shadow-color: rgba(35, 31, 29, 0.12) !important;
+}
+
+/* ============================================================================
+   THEME ENGINE OVERRIDES: Dark Espresso High-Contrast Mode (espresso-dark)
+   ============================================================================ */
+[data-theme="espresso-dark"] .bg-slate-950 {
+  background-color: var(--bg-canvas) !important;
+}
+
+[data-theme="espresso-dark"] .bg-slate-950\/95,
+[data-theme="espresso-dark"] .bg-slate-950\/90,
+[data-theme="espresso-dark"] .bg-slate-950\/80,
+[data-theme="espresso-dark"] .bg-slate-950\/70,
+[data-theme="espresso-dark"] .bg-slate-950\/60 {
+  background-color: var(--bg-surface) !important;
+}
+
+[data-theme="espresso-dark"] .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(12, 10, 9, 0.78) !important;
+}
+
+[data-theme="espresso-dark"] .bg-slate-900,
+[data-theme="espresso-dark"] .bg-slate-900\/95,
+[data-theme="espresso-dark"] .bg-slate-900\/90,
+[data-theme="espresso-dark"] .bg-slate-900\/80,
+[data-theme="espresso-dark"] .bg-slate-900\/75,
+[data-theme="espresso-dark"] .bg-slate-900\/70,
+[data-theme="espresso-dark"] .bg-slate-900\/60,
+[data-theme="espresso-dark"] .bg-slate-900\/45 {
+  background-color: var(--bg-surface-elevated) !important;
+}
+
+[data-theme="espresso-dark"] .bg-slate-800,
+[data-theme="espresso-dark"] .bg-slate-800\/80,
+[data-theme="espresso-dark"] .bg-slate-800\/60 {
+  background-color: #352E29 !important;
+}
+
+[data-theme="espresso-dark"] .border-slate-800,
+[data-theme="espresso-dark"] .border-slate-800\/90,
+[data-theme="espresso-dark"] .border-slate-800\/80,
+[data-theme="espresso-dark"] .border-slate-800\/70 {
+  border-color: var(--border-subtle) !important;
+}
+
+[data-theme="espresso-dark"] .border-slate-700 {
+  border-color: var(--border-strong) !important;
+}
+
+[data-theme="espresso-dark"] .text-white,
+[data-theme="espresso-dark"] .text-slate-100,
+[data-theme="espresso-dark"] .text-slate-200 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="espresso-dark"] .text-slate-300 {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="espresso-dark"] .text-slate-400,
+[data-theme="espresso-dark"] .text-slate-500 {
+  color: var(--text-muted) !important;
+}
