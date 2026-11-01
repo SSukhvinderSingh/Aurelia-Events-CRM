@@ -1,0 +1,12 @@
+{
+  "name": "pw5-events-crm",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PW5 EventsCRM — Unified launcher for FastAPI Backend (port 8000) + React/Vite Frontend (port 5173)",
+  "scripts": {
+    "dev:backend": "cd backend && ./.venv/bin/uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "sh start.sh",
+    "test": "cd backend && ./.venv/bin/pytest -v"
+  }
+}

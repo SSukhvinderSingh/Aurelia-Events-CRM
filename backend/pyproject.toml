@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pw5-events-crm-backend"
+version = "1.0.0"
+description = "B2B Event Planning Agency CRM with Timeline-Centric Multi-Agent Swarm, FastMCP tools, and Snapshot Rollback"
+readme = "../README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic>=2.6.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0",
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
